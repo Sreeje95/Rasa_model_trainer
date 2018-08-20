@@ -8,18 +8,16 @@ Created on Sun Aug 19 12:37:40 2018
 from rasa_nlu.converters import load_data
 from rasa_nlu.config import RasaNLUConfig
 from rasa_nlu.model import Trainer
-# from rasa_nlu.model import Metadata, Interpreter
 import pandas as pd
 import os, subprocess, json
 import csv_to_rasa
 
 
 def model_engine(train, model="NA", rasa= False):
-    #    model = sys.argv[1]
+    
     config = RASA_CONFIG_SPACY
 
     if train and model!='NA':
-#        tf_model_engine(model)
         # Create separate class/intent based data files
         
         file_path = os.path.join(INPUT_PATH +, (model + '/' + model + '.csv'))
@@ -30,7 +28,6 @@ def model_engine(train, model="NA", rasa= False):
             print "Building rasa model for "+ model
             print "********************\n"
             csv_to_rasa.convert_csv_to_rasa_json(model)
-            #convert_generic_to_rasa(model)
     
             load_traning_data_path = os.path.join(RASA_JSON_PATH, (model + '.json'))
             model_path = (RASA_MODEL_PATH)
