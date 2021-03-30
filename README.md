@@ -7,6 +7,6 @@ Rasa_trainer.py
 
 Intent_identfier.py
 
-1) Firstly makes the subprocess call and makes the server up.
+1) Firstly makes the subprocess call and activates the server.
 2) Uses the model and identifies the intent respective to the query thats specified.
 3) Provides the sorted intent names with confidence score. 
